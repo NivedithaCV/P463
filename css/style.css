@@ -1,0 +1,39 @@
+html, body {height:100%;
+     margin:0; 
+     font-size:16px; 
+     font-family:"Lato", sans-serif; 
+     font-weight:400; 
+     line-height:1.8em; 
+     color:rgb(12, 12, 12);}
+.pimg1, .pimg2, .pimg3 {
+    position:relative; 
+    opacity:1;}
+.pimg1 {
+    background:url(exoplanet1.jpg) no-repeat center fixed; background-size:cover; 
+    min-height:100%;
+}
+.pimg2 {
+    background:url(exoplanet2.jpg) no-repeat center fixed; 
+    background-size:cover; 
+    min-height:400px;
+}
+.pimg3 {
+    background:url(exoplanet3.jpg) no-repeat center fixed; 
+    background-size:cover; 
+    min-height:400px;
+}
+.section {
+    text-align:center; padding:50px 80px;}
+.section-light {
+    background-color:#f4f4f4; 
+    color:#666;}
+.section-dark {
+    background-color:#282e34; 
+    color:#ddd;}
+.ptext {position:absolute; top:50%; width:100%; text-align:center; color:#000; font-size:27px; letter-spacing:8px; text-transform:uppercase;}
+.ptext .border {background:#111; color:#fff; padding:20px;}
+.ptext .border.trans {background:transparent;}
+@media(max-width:568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment:scroll;}
+}
