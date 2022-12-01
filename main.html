@@ -4,30 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Main page</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
     <div class="pimg1">
         <div class="ptext">
-          <span class="border">Parallax Website</span>
+          <span class="border">Introduction</span>
         </div>
       </div>
       
       <section class="section section-light">
-        <h2>Section One</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatibus eum sint, quidem officiis similique voluptate totam, aspernatur, quod labore natus ut iste quae impedit aliquam magnam nobis exercitationem! Voluptatibus doloremque labore sequi quaerat aperiam soluta eligendi, beatae alias illum corrupti, adipisci vitae nihil delectus assumenda pariatur, cumque voluptatem expedita. Culpa, delectus assumenda cumque fugiat. Consequatur accusantium et sit dolore, voluptatum magni, exercitationem cum blanditiis optio sequi ipsa numquam maiores debitis delectus quos excepturi! Ducimus repudiandae quia incidunt sunt non, consequuntur quibusdam sapiente suscipit. Tenetur in ex, quisquam libero placeat, odit repudiandae, eligendi quibusdam eaque debitis culpa natus minus architecto.</p>
+        <h2></h2>
+        
+        <p>Before the study of exoplanets our solar system was
+           the only source of data for the study of planet formation and evolution. The geometry and property of planets were inferred only 
+           from the eight planets orbiting the sun. From these planets the planetary orientations, physical and chemical properties and 
+           characteristics of orbits were studied. The similarities within these eight planets helped in formulating theories on the formation 
+           of the solar system. But the question of whether certain properties or phenomena that were observed in our solar system was caused 
+           by the laws of physics or randomness was not able to be answered before a few decades, as there were no other planetary systems. 
+           When a planet was discovered orbiting the Sun-like star 51 Pegasi in the 1990s, these and many other puzzles began to be answered.
+           Astronomers and the general public have grown more and more interested in finding and characterizing exoplanets, and this accelerated
+            after the launch of the Kepler spacecraft in 2009. And other more initiatives have been conducted over the past ten years to collect
+             information that might eventually result in the discovery of more exoplanets. Presently there are more than 5000 confirmed 
+             exoplanets that were able to be detected and these exoplanets have varying properties, they have different masses, sizes, orbital 
+             periods and also the stars they orbit are of different types.For the understanding of planet distribution and the formation pattern
+              Kepler mission has a major hand . It was able to give a large number of planet dataset from which patterns can be identified to 
+              stimulate and test theories. The work that has been done to improve these data like understanding the Kepler dataset pipeline for
+          looking at the detection efficiency and studies from the Kepler follow-up program has increased the reliability of the statistical
+           inferences made. The major works in statistical study have been given in the Win and Fabrichy (2015) and Zhu and Dong (2021) . 
+
+           <a hreflang="Fig :1"> Fig: 1. </a>
+
+        </p>
+           
+        <Fig:1>
+          <a href="exo_discovery_histogram.mp4" target="_blank">
+          <video width="520" src="exo_discovery_histogram.mp4" muted autoplay> Fig: 1</video>
+        </a>
+          <figcaption>Fig 1: The number of confirmed exoplanets in each years. </figcaption>
+          
+        </Fig:1>
+        <p>
+          In the coming sections we will look at the planet distribution and then the implications of the statistical 
+          study on the theories in planet formation and  its evolution will be discussed.
+
+        </p>
+        <!-- <Fig:1>
+          <video width="320" src="exo_discovery_histogram.mp4" muted autoplay> Fig: 1</video>
+
+      </Fig:1> -->
       </section>
       
       <div class="pimg2">
         <div class="ptext">
-          <span class="border trans">Image Two Text</span>
+          <span class="border trans">Statistical study</span>
         </div>
       </div>
       
       <section class="section section-dark">
-        <h2>Section Two</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatibus eum sint, quidem officiis similique voluptate totam, aspernatur, quod labore natus ut iste quae impedit aliquam magnam nobis exercitationem! Voluptatibus doloremque labore sequi quaerat aperiam soluta eligendi, beatae alias illum corrupti, adipisci vitae nihil delectus assumenda pariatur, cumque voluptatem expedita. Culpa, delectus assumenda cumque fugiat. Consequatur accusantium et sit dolore, voluptatum magni, exercitationem cum blanditiis optio sequi ipsa numquam maiores debitis delectus quos excepturi! Ducimus repudiandae quia incidunt sunt non, consequuntur quibusdam sapiente suscipit. Tenetur in ex, quisquam libero placeat, odit repudiandae, eligendi quibusdam eaque debitis culpa natus minus architecto.</p>
+        <h2>Methods</h2>
+
+        <p>The first inference from the data that can be obtained  using statistics is the occurrence rate of 
+          the planets that gives how many planets were detected to the observed stars.  The occurrence rate is 
+          given as,
+        </p>
+        $$n_p= \frac{N_{tp}}{N_{ts}}$$
+        
+        <p>
+          where N<sub>tp</sub> is the Total number of planets and N<sub>
+            ts </sub> the total number of stars. The planets will be sampled in a parameter space that can differ. The fraction of the number of stars to the number of planets is given by, 
+            $$F_p = \frac{Total\:of\:planetary\:systems}{total\:of\:stars}  $$
+            \(n_p\) and \(F_p\) will be referred from here as the frequency 
+            of planets and frequency of the planetary systems to clear any confusions.
+            The ratio of these terms i.e, fraction of total number of planets to the planetary system gives the multiplicity
+            For calculating the occurrence rate the likelihood based method is used, this is a probabilistically motivated method where the model is based on Poisson distribution by taking into account that the probability of observation depends upon the transit probability and the efficiency of the detection. The estimator of the frequency is, 
+            $$n_p = \frac{N_p}{\sum_{j=1}^{N_*}p_j}$$  
+            $$ = \frac{N_p}{N_*} \frac{1}{|p|}$$
+             $$  = \frac{N_p}{N_*^{eff}} $$
+
+             The constant \(p_j\) denotes the planetary detection efficiency for the \(j^{th}\) star. As the detection effeciency can deviate and flactuate this is taken care in the equation as it is averaged over the detection efficincy.
+             Using a simplified bayesian  model this can be calculated using the likelihood of the planet detection as Gamma distribution.
+             The constant \(\alpha_0\) and \(\beta_0\) taken as the shape parametr and rate parameter.
+             The statistical sample is given by, 
+             $$P(\tilde{n_p}|N_p,N_*^{eff})\propto n_p^{\alpha_0 +N_p -1}e^{-n_p(\beta_0 + N_*^{eff})} $$ .
+             This is used in the study for calculating frequency of planet in the period-radius parameter plane.
+             Sample for the statistic analysis was taken from the Kepler mission. In this sample the planets having a radius in the range from the jupyter to earth and period of 1 year is available.
+             In the data cleaning process the data with signal to noise ratio below 7.0 , those planets which is marked as false positive, 
+             the planets with radius less than 20 times radius of earth, P greater than 700 days and impact parameter greater than 1 has been removed. the final sample size of the 
+             planet distribution is 2,525.
+            </p>
+        <p>One of the discoveries in the planet statistics is 
+          the radius valley; it shows a decrease in the 
+          detection of the planet in the radius plane 
+          separating the super Earth and the sub Neptune. 
+          The theories that are used to explain the radius
+           valley are photoevaporation which could have driven the mass loss  and core-powered mass 
+           loss but these theories are not without flaws.  
+           This is visible in the Kepler survey dine in 
+            Zhu and Dong (2021). The dependence of the radius 
+            valley to the orbital period and stellar mass has 
+            been parameterized as, 
+            $$\frac{R_p}{R_p^{valley}}= (\frac{P}{10 days}^g)(\frac{M_*}{M_\odot})^b $$</p>
+        <h2> Results and discussion</h2>
+        <h3> Occurence rate:</h3> 
+        <p>
+          <Fig:3>
+            <a href="Plot2.webp" target="_blank">
+            <img width="520" height="350" src="Plot2.webp"></img>
+          </a>
+            <figcaption>Fig 1:The planet distribution in period-radius plane. The different symbols as shown in legend represent the detection method of the planet.
+              The dashed line shows the radius of jupiter and radius of neptune. the grey solid line shows the median efficiency of planet detection.  </figcaption>
+          </Fig:3>
+        </p>
+         
+        <p>
+          The period radius plane is made to grid with each cell being equally spaced in logarithmic scale. The average detection efficiency is calculated as,
+          $$ &lt; p &gt; =\frac{ \int_{R_{p,min}}^{R_{p,max}} \int_{P_{min}}{P_{max}}(\frac{R_\odot}{a} S(P,R_p)dlnPdlnR_p}
+          {\int_{R_{p,min}}^{R_{p,max}}dlnPdlnR_p}$$
+          \(S(P,R_p)\) is for a perticular period and radius the sensitivity introduced by survey detection thresholds.
+          The grid cells are defined by the \(R_{p,min},R_{p,max},P_{min},P_{max}\) and the probability of the transit is calculated using the \(a\), semimajor axis using \(R_\odot /a\)
+          The planet frequency og each cell is given in Fig 2. It shows the hot jupiter cell group
+          and hot Neptune cells desert and planets with very short period is outlined with dashed red lines. The number shows the planets frequency within that cell
+          with their error bar given the fraction is multiplicity.
+        </p>
+        <Fig:3>
+          <a href="plot3.webp" target="_blank">
+          <img width="520" src="plot3.webp"></img>
+        </a>
+          <figcaption>Fig 2: The planet frequency and multiplicity mapped in the grid.</figcaption>
+        </Fig:3>
+        <p> It can be seen in the frequency map that the planets with radius less than \(4R_\bigoplus\)
+          is present in the orbital period of less than 400 days. The trend of the frequency is greates in large radius
+           and small orbital period and the smallest in small radius and large orbital period cells.
+           This trend is disrupted in the radius valley. The planets are seen to be present in multiplanet system in the planetary systems surveyed by the Kepler.
+
+
+        </p>
+
+
+
+
+
+         <h3>Radius valley:</h3>
+           
+          <Fig:2>
+          <a href="plot1.webp" target="_blank">
+          <img width="520" src="plot1.webp"></img>
+        </a>
+          <figcaption>Fig 3: The radius distribution in the radius valley region </figcaption>
+        </Fig:2>
+        
+        <p>
+        
+          The radius valley that is found in the taken sample is shown in Fig 2
+        The values of the constants are taken for planets in the radius 1 to
+         4\(R_\bigoplus\) and the
+         period as 3 to 30 days. The radius valley is then found in the rescaled value of the radius . 
+         $$\tilde{R_p} = R_p(\frac{P}{10days})^{-g}(M_*/M_\odot)^{-b}$$
+         The Fig:2 a plot 
+        shows the rescaled radius with the planets within the box used for the radius distribution.
+         the plot Fig 2.b shows the number of 
+        planets for the rescaled radius and
+         the gray band shows the dip in the distribution. It can be senn that the
+         number of planets in the sub earth size is not decreasing and this could suggest
+         more exoplanet in this parameter space yet to be discovered. The result cannot produce any good prrof of which theory 
+         explains the radius valley the best. Composition constrain are inferred from this region of the radius distribution
+         with the mass-radius measurement of these plants which tells that smaller have dense cores and these could aquire gasous envelope of few thickness.
+        </p>
       </section>
       
       <div class="pimg3">
@@ -43,7 +189,7 @@
       
       <div class="pimg1">
         <div class="ptext">
-          <span class="border">Parallax Website</span>
+          <span class="border"><a href="bib.html">Reference</a></span>
         </div>
       </div> 
 </body>
